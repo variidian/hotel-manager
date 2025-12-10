@@ -11,14 +11,25 @@ config_version=5
 [application]
 
 config/name="hotel manager"
+run/main_scene="uid://cj64cj516grky"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+e="*res://new_script.gd"
+
 [display]
 
-window/size/viewport_width=500
-window/size/viewport_height=300
+window/size/viewport_width=1000
+window/size/viewport_height=600
+window/size/resizable=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://hotel_intro.dialogue")

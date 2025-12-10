@@ -1,0 +1,7 @@
+~ start
+New Hotel Owner: Huh? This place is so... old and worn down.
+New Hotel Owner: I guess i'll need to look into decorating the rooms of this place.
+New Hotel Owner: And.. cause i just took out a loan of 3,000, i'm... in a bit of debt.
+New Hotel Owner: Let's try pay it back soon, or i'll have to declare bankruptcy.
+set e.hotel_intro_ended = true
+=> END

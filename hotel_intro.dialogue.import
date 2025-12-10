@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bxj07ylvrsf7m"
+path="res://.godot/imported/hotel_intro.dialogue-53a3e7c8364c54486384a76dd44145fe.tres"
+
+[deps]
+
+source_file="res://hotel_intro.dialogue"
+dest_files=["res://.godot/imported/hotel_intro.dialogue-53a3e7c8364c54486384a76dd44145fe.tres"]
+
+[params]
+
+defaults=true

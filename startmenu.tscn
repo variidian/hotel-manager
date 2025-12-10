@@ -6,7 +6,8 @@
 [node name="startmenu" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(250, 150)
+position = Vector2(499.5, 300.5)
+scale = Vector2(1.998, 2.0033333)
 texture = ExtResource("1_ynf42")
 
 [node name="Control" parent="." instance=ExtResource("2_kj28g")]
@@ -14,9 +15,9 @@ anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
-offset_left = 257.0
-offset_top = 158.0
-offset_right = 257.0
-offset_bottom = 158.0
+offset_left = 492.0
+offset_top = 341.0
+offset_right = 492.0
+offset_bottom = 341.0
 grow_vertical = 0
 metadata/_edit_use_anchors_ = true
