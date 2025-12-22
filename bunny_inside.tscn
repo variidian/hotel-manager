@@ -1,0 +1,225 @@
+[gd_scene load_steps=11 format=3 uid="uid://cwvrxxfwkpcc6"]
+
+[ext_resource type="Script" uid="uid://bs0rkaq0ksaxj" path="res://bunny_inside.gd" id="1_clonj"]
+[ext_resource type="Texture2D" uid="uid://bnw1626k40nkg" path="res://assets/bunny.PNG" id="1_mbefr"]
+
+[sub_resource type="Animation" id="Animation_clonj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(171, 296)]
+}
+
+[sub_resource type="Animation" id="Animation_mbefr"]
+resource_name = "to_room1"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.13333334, 4.9333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.9, 2.6333334, 5.2, 6.0666666, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-31, 300), Vector2(160.34177, 297.37976), Vector2(159, 173), Vector2(159, 173), Vector2(160.34177, 297.37976), Vector2(-31, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_v227e"]
+resource_name = "to_room2"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5.84),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.8, 2.8333333, 6.4666667, 8.3, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-31, 300), Vector2(497, 293), Vector2(506, 158), Vector2(506, 158), Vector2(497, 293), Vector2(-31, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_6leu4"]
+resource_name = "to_room3"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 9.276),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 6.366667, 9.9, 11.233334, 14.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-31, 300), Vector2(831, 289), Vector2(840, 164), Vector2(840, 164), Vector2(831, 289), Vector2(-31, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_fku3n"]
+resource_name = "to_room4"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.59),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.3666667, 2.1333334, 5.4666667, 6.0333333, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-31, 300), Vector2(167, 292), Vector2(161, 488), Vector2(161, 488), Vector2(167, 292), Vector2(-31, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_d5rmd"]
+resource_name = "to_room5"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7.180667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.4333334, 4.7, 8.066667, 8.966666, 11.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-31, 300), Vector2(500, 294), Vector2(500, 485), Vector2(500, 485), Vector2(500, 294), Vector2(-31, 300)]
+}
+
+[sub_resource type="Animation" id="Animation_esp26"]
+resource_name = "to_room6"
+length = 17.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:flip_h")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.133333, 6.266667, 11.2, 12.3, 16.966667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-31, 300), Vector2(840, 296), Vector2(836, 458), Vector2(836, 458), Vector2(840, 296), Vector2(-31, 300)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v227e"]
+_data = {
+&"RESET": SubResource("Animation_clonj"),
+&"to_room1": SubResource("Animation_mbefr"),
+&"to_room2": SubResource("Animation_v227e"),
+&"to_room3": SubResource("Animation_6leu4"),
+&"to_room4": SubResource("Animation_fku3n"),
+&"to_room5": SubResource("Animation_d5rmd"),
+&"to_room6": SubResource("Animation_esp26")
+}
+
+[node name="bunny_inside" type="Node2D"]
+script = ExtResource("1_clonj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_v227e")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(171, 296)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_mbefr")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

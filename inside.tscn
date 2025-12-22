@@ -7,53 +7,55 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_7ujdm")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
 offset_right = 1000.0
 offset_bottom = 600.0
 color = Color(1, 1, 0.89411765, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
+[node name="ColorRect2" type="ColorRect" parent="Node2D"]
 offset_top = 264.0
 offset_right = 1001.0
 offset_bottom = 340.0
 color = Color(0.507783, 0.70383865, 0.64745677, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="ColorRect3" type="ColorRect" parent="Node2D"]
 offset_left = 135.0
 offset_top = 232.0
 offset_right = 200.0
 offset_bottom = 309.0
 color = Color(0.507783, 0.70383865, 0.64745677, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="."]
+[node name="ColorRect4" type="ColorRect" parent="Node2D"]
 offset_left = 468.0
 offset_top = 223.0
 offset_right = 533.0
 offset_bottom = 300.0
 color = Color(0.507783, 0.70383865, 0.64745677, 1)
 
-[node name="ColorRect5" type="ColorRect" parent="."]
+[node name="ColorRect5" type="ColorRect" parent="Node2D"]
 offset_left = 799.0
 offset_top = 231.0
 offset_right = 864.0
 offset_bottom = 308.0
 color = Color(0.507783, 0.70383865, 0.64745677, 1)
 
-[node name="ColorRect6" type="ColorRect" parent="."]
+[node name="ColorRect6" type="ColorRect" parent="Node2D"]
 offset_left = 800.0
 offset_top = 301.0
 offset_right = 865.0
 offset_bottom = 378.0
 color = Color(0.507783, 0.70383865, 0.64745677, 1)
 
-[node name="ColorRect7" type="ColorRect" parent="."]
+[node name="ColorRect7" type="ColorRect" parent="Node2D"]
 offset_left = 471.0
 offset_top = 309.0
 offset_right = 536.0
 offset_bottom = 386.0
 color = Color(0.507783, 0.70383865, 0.64745677, 1)
 
-[node name="ColorRect8" type="ColorRect" parent="."]
+[node name="ColorRect8" type="ColorRect" parent="Node2D"]
 offset_left = 133.0
 offset_top = 304.0
 offset_right = 198.0
