@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://5lbrn03evp46"
+path="res://.godot/imported/marketing_fees.dialogue-50097a0cb0b2e4e08e95fb5b5ddd2752.tres"
+
+[deps]
+
+source_file="res://marketing_fees.dialogue"
+dest_files=["res://.godot/imported/marketing_fees.dialogue-50097a0cb0b2e4e08e95fb5b5ddd2752.tres"]
+
+[params]
+
+defaults=true

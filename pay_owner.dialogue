@@ -1,7 +1,9 @@
 ~ start
 Other Hotel Owner: Do you have the money?
 New Hotel Owner: Yes.
-Other Hotel Owner: And i'll take that. Thanks for the transaction. You should be getting normal reviews now.
-set e.advertisement_multiplier = (1.0)
+Other Hotel Owner: And i'll take that. 
+Other Hotel Owner: Thanks for the transaction. You should be getting normal reviews now.
+set e.advertisement_multiplier = 1.0
+set e.money -= 2000
 do e.to_hotel_outside()
 => END

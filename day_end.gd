@@ -7,6 +7,7 @@ extends Control
 @onready var s5 = $star5
 @onready var animation = $AnimationPlayer
 @onready var dialogue = preload("res://1star_review.dialogue")
+var go_hotel_intro := false
 func _ready():
 	s1.hide()
 	s2.hide()
@@ -18,7 +19,7 @@ func _ready():
 		review1_text.text = "This place is SO bad. The aura here is SO off. One star!"
 		s1.show()
 	elif Timeofday.day == 1 and e.bought_bed and e.bought_bookshelf:
-		review1_text.text = "Sufficiently terrible! One star!"
+		review1_text.text = "terrible! One star!"
 		s1.show()
 	elif Timeofday.day == 1 and e.bought_bed and e.bought_sign:
 		review1_text.text = "Utterly lacking. One star!"
@@ -29,17 +30,38 @@ func _ready():
 	elif Timeofday.day == 1:
 		review1_text.text = "...Disgusting. One star!"
 		s1.show()
-	elif e.advertisement_multiplier == 0.5 and not e.money <= 3000:
-		review1_text.text = "I'm still waiting for the money. You're only getting a two star review from me until then."
+	elif not e.paid_owner and e.money <= 2000:
+		review1_text.text = "I'm still waiting for the money."
 		s1.show()
 		s2.show()
-	elif e.advertisement_multiplier == 0.5 and e.money >= 3000:
+	elif not e.paid_owner and e.money >= 2000:
 		review1_text.text = "It would seem you haven enough funds for the payment."
 		s1.show()
 		s2.show()
 		s3.show()
 		e.pay_owner = true
-		get_tree().change_scene_to_file("res://hotel_intro.tscn")
+	elif e.paid_owner and not e.marketing_fees:
+		review1_text.text = "Hey. We need to talk."
+		s1.show()
+		s2.show()
+		s3.show()
+		e.marketing_fees = true
+		go_hotel_intro = true
+	elif e.amount_of_furniture > 3:
+		review1_text.text = "A comfortable amount of furniture here."
+		s1.show()
+		s2.show()
+		s3.show()
+		s3.show()
+	elif e.amount_of_furniture <= 3 and e.amount_of_furniture > 1:
+		review1_text.text = "cozy, but could use a bit more furniture and decorations."
+		s1.show()
+		s2.show()
+		s3.show()
+	elif e.amount_of_furniture == 1:
+		review1_text.text = "not a lot here. the bed is comfortable though."
+	elif e.amount_of_furniture < 1:
+		review1_text.text = "theres like.. nothing here."
 	else:
 		review1_text.text = "huh.."
 
@@ -47,3 +69,8 @@ func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free()
 	if Timeofday.day == 1:
 		DialogueManager.show_dialogue_balloon(dialogue, "start")
+	elif not e.paid_owner and e.money >= 2000:
+		get_tree().change_scene_to_file("res://hotel_intro.tscn")
+	if go_hotel_intro:
+		get_tree().change_scene_to_file("res://hotel_intro.tscn")
+		go_hotel_intro = false

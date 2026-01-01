@@ -7,6 +7,7 @@ func _on_button_pressed() -> void: #bed purchase
 		if e.money >= 800:
 			e.money -= 800
 			e.add_bed = true
+			e.amount_of_furniture += 1
 func _process(_float) -> void:
 	moneyamount.text = "coins:	" + str(e.money)
 
@@ -20,12 +21,14 @@ func _on_button_2_pressed() -> void: #bookshelf purchase
 		if e.money >= 1200:
 			e.money -= 1200
 			e.add_bookshelf = true
+			e.amount_of_furniture += 1
 
 func _on_button_3_pressed() -> void: #sign purchase
 	if e.bought_bed and not e.bought_sign:
 		if e.money >= 900:
 			e.money -= 900
 			e.add_sign = true
+			e.amount_of_furniture += 1
 
 func _ready():
 	sprite.show()

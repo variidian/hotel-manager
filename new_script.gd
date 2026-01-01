@@ -22,9 +22,12 @@ var room6_full := false
 var played_tutorial := false
 var review = 0
 var checkoutside := false
-var advertisement_multiplier := int(1.0)
+var advertisement_multiplier: float = 1.0
 var prevent := false
 var pay_owner := false
+var paid_owner := false
+var marketing_fees := false
+var amount_of_furniture = 0
 func fish():
 	get_tree().change_scene_to_file("res://hotel_intro.tscn")
 func to_hotel_outside():

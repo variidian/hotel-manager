@@ -5,10 +5,10 @@ Other Hotel Owner: You've had too many customers lately, so...
 Other Hotel Owner: Some things had to happen :)
 New Hotel Owner: No! please, could you remove the reviews? All my customers are going to leave..
 Other Hotel Owner: ...
-Other Hotel Owner: You'll have to pay me a sum of 3000 coins for that.
+Other Hotel Owner: You'll have to pay me a sum of 2000 coins for that.
 Other Hotel Owner: I'll be back soon.
 Narrator: Your money multiplier will be decreased until you pay back the other hotel owner.
-set e.advertisement_multiplier = (0.50)
+set e.advertisement_multiplier = 0.50
 set e.checkoutside = false
 do e.to_hotel_outside()
 => END

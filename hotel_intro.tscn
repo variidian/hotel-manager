@@ -18,3 +18,7 @@ texture = ExtResource("1_al2m1")
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(154, 422)
 texture = ExtResource("4_q35lt")
+
+[node name="random_fees" type="Sprite2D" parent="."]
+position = Vector2(846, 419)
+texture = ExtResource("4_q35lt")
