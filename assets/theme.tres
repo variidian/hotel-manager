@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://d0kqpuio6hw8v"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://d0kqpuio6hw8v"]
 
 [ext_resource type="FontFile" uid="uid://c7o5odwberpw0" path="res://assets/connection_ii/ConnectionII.otf" id="1_5x3i2"]
 
@@ -26,9 +26,22 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x3i2"]
+bg_color = Color(0.5611189, 0.7228247, 0.82877725, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.9580614, 0.74880666, 0.63742524, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [resource]
 Button/font_sizes/font_size = 25
 Button/fonts/font = ExtResource("1_5x3i2")
 Button/styles/hover = SubResource("StyleBoxFlat_v437m")
 Button/styles/normal = SubResource("StyleBoxFlat_0veaj")
+Panel/styles/panel = SubResource("StyleBoxFlat_5x3i2")
 RichTextLabel/fonts/normal_font = ExtResource("1_5x3i2")

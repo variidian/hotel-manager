@@ -1,10 +1,71 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1ugpoiu1yxhi"]
+[gd_scene load_steps=9 format=3 uid="uid://b1ugpoiu1yxhi"]
 
 [ext_resource type="Script" uid="uid://d2gvgywp2kmmb" path="res://decorate_menu.gd" id="1_2pxhd"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="1_x4i3i"]
 [ext_resource type="Texture2D" uid="uid://iv5ow3gwreef" path="res://assets/bookshelf.png" id="3_5g3bp"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="3_vcb5d"]
 [ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="4_cd34k"]
+
+[sub_resource type="Animation" id="Animation_cd34k"]
+resource_name = "not_enough_money"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("too_broke:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.2333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-256, 457), Vector2(-238, 130)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("too_broke:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.64, 1.2333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3xt5y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("too_broke:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-256, 457)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("too_broke:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vfjqy"]
+_data = {
+&"RESET": SubResource("Animation_3xt5y"),
+&"not_enough_money": SubResource("Animation_cd34k")
+}
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -24,33 +85,33 @@ offset_right = 502.0
 offset_bottom = 600.0
 color = Color(0.99846643, 0.9999998, 0.87695545, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="colorRects"]
+[node name="ColorRect2" type="Panel" parent="colorRects"]
 offset_left = 26.0
 offset_top = 12.0
 offset_right = 174.0
 offset_bottom = 207.0
-color = Color(0.62582356, 0.72010916, 0.8052794, 1)
+theme = ExtResource("3_vcb5d")
 
-[node name="ColorRect3" type="ColorRect" parent="colorRects"]
+[node name="ColorRect3" type="Panel" parent="colorRects"]
 offset_left = 185.0
 offset_top = 12.0
 offset_right = 333.0
 offset_bottom = 208.0
-color = Color(0.62582356, 0.72010916, 0.8052794, 1)
+theme = ExtResource("3_vcb5d")
 
-[node name="ColorRect4" type="ColorRect" parent="colorRects"]
+[node name="ColorRect4" type="Panel" parent="colorRects"]
 offset_left = 344.0
 offset_top = 13.0
 offset_right = 492.0
 offset_bottom = 79.0
-color = Color(0.62582356, 0.72010916, 0.8052794, 1)
+theme = ExtResource("3_vcb5d")
 
-[node name="ColorRect5" type="ColorRect" parent="colorRects"]
+[node name="ColorRect5" type="Panel" parent="colorRects"]
 offset_left = 26.0
 offset_top = 212.0
 offset_right = 174.0
 offset_bottom = 408.0
-color = Color(0.62582356, 0.72010916, 0.8052794, 1)
+theme = ExtResource("3_vcb5d")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -127,6 +188,23 @@ offset_right = 174.0
 offset_bottom = 407.0
 theme = ExtResource("3_vcb5d")
 text = "$900"
+
+[node name="too_broke" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -256.0
+offset_top = 457.0
+offset_right = 234.0
+offset_bottom = 588.0006
+theme = ExtResource("3_vcb5d")
+theme_override_colors/default_color = Color(0.087915994, 0.028131485, 0.0041757217, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "Not enough money"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_vfjqy")
+}
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

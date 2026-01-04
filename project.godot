@@ -22,6 +22,10 @@ e="*res://new_script.gd"
 BgMusic="*res://bg_music.tscn"
 Timeofday="*res://timeofday.gd"
 
+[dialogue_manager]
+
+runtime/balloon_path="res:///balloon.tscn"
+
 [display]
 
 window/size/viewport_width=1000

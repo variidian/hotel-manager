@@ -19,7 +19,7 @@ func _process(_float) -> void:
 			DialogueManager.show_dialogue_balloon(one_star_review, "start")
 			other_hotel_owner.show()
 			e.transition2_finish = false
-		elif e.pay_owner:
+		elif e.pay_owner and not e.paid_owner:
 			DialogueManager.show_dialogue_balloon(pay_owner, "start")
 			other_hotel_owner.show()
 			e.transition2_finish = false
@@ -27,11 +27,12 @@ func _process(_float) -> void:
 		elif e.marketing_fees:
 			DialogueManager.show_dialogue_balloon(pay_marketing_fees, "start")
 			e.transition2_finish = false
+			marketing_fees.show()
 		else:
 			DialogueManager.show_dialogue_balloon(intro, "start")
 			e.transition2_finish = false
-	if e.transition_finish and not e.checkoutside and not e.pay_owner:
+	if e.transition_finish and not e.checkoutside and not e.pay_owner and not e.marketing_fees:
 		e.transition_finish = false
 		get_tree().change_scene_to_file("res://node_2d.tscn")
-	if e.hotel_intro_ended and not e.checkoutside and not e.pay_owner:
+	if e.hotel_intro_ended and not e.checkoutside and not e.pay_owner and not e.marketing_fees:
 		transition.play("transition1")

@@ -3,6 +3,7 @@ Mysterious figure: Hey, you still owe us for the marketing we did for your hotel
 New Hotel Owner: What?
 Mysterious figure: It'll cost you $600. I'll just take it, yeah?
 New Hotel Owner: ...
+Narrator: Make sure to never go below $-500 or you'll have to declare bankruptcy.
 set e.money -= 600
 do e.to_hotel_outside()
 => END
