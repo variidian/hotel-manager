@@ -8,4 +8,6 @@ Inspector: Hey! You can't keep ignoring me
 New Hotel Owner:  Wha- huh?
 Inspector: This is really dangerous in the case that theres a fire - i'm sorry, but i'm going to have to issue you a fine of $500 for this.
 Inspector: I'll be back later to check for any other problems here. 
+set e.money -= 500
+do e.to_hotel_outside()
 => END

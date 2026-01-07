@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=4 uid="uid://buf3n8v7q1su2"]
+[gd_scene load_steps=21 format=4 uid="uid://buf3n8v7q1su2"]
 
 [ext_resource type="Script" uid="uid://dcodpfkp74mft" path="res://node_2d.gd" id="1_8cv3p"]
 [ext_resource type="TileSet" uid="uid://ljej2g64q7vb" path="res://assets/tile.tres" id="2_01y1d"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="3_42v8c"]
 [ext_resource type="Texture2D" uid="uid://iv5ow3gwreef" path="res://assets/bookshelf.png" id="4_mb7s7"]
 [ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="5_xorjj"]
+[ext_resource type="Texture2D" uid="uid://dnjcutyldsfxn" path="res://assets/fire hydrant.png" id="6_01y1d"]
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="6_xwbdb"]
 [ext_resource type="Texture2D" uid="uid://bh1ctf4v6hqtq" path="res://assets/ARROW.png" id="7_voycu"]
 
@@ -45,6 +46,18 @@ tile_layout = 5
 tile_offset_axis = 1
 tile_size = Vector2i(32, 16)
 sources/0 = SubResource("TileSetAtlasSource_ir8iy")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_42v8c"]
+texture = ExtResource("6_01y1d")
+texture_region_size = Vector2i(32, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mb7s7"]
+tile_shape = 1
+tile_layout = 5
+tile_offset_axis = 1
+tile_size = Vector2i(32, 16)
+sources/0 = SubResource("TileSetAtlasSource_42v8c")
 
 [sub_resource type="Animation" id="Animation_rj586"]
 length = 0.001
@@ -230,6 +243,10 @@ tile_set = SubResource("TileSet_ir8iy")
 [node name="sign" type="TileMapLayer" parent="layer_holder"]
 tile_map_data = PackedByteArray("AAD4////AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_hqns4")
+
+[node name="extinguish" type="TileMapLayer" parent="layer_holder"]
+tile_map_data = PackedByteArray("AAD6//7/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_mb7s7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

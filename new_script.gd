@@ -31,6 +31,8 @@ var amount_of_furniture = 0
 var emergency_exit := false
 var paid_marketing_fees := false
 var paid_emergency_exit := false
+var bought_fire_extinguisher := false
+var add_fire_extinguisher := false
 func fish():
 	get_tree().change_scene_to_file("res://hotel_intro.tscn")
 func to_hotel_outside():

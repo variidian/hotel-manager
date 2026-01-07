@@ -1,6 +1,7 @@
 extends Node2D
 @onready var bed = $layer_holder/bed
 @onready var bookshelf = $layer_holder/bookshelf
+@onready var fire_extinguisher = $layer_holder/extinguish
 @warning_ignore("shadowed_global_identifier")
 @onready var sign = $layer_holder/sign
 @onready var animation = $AnimationPlayer
@@ -13,6 +14,8 @@ func _ready():
 		bookshelf.hide()
 	if not e.bought_sign:
 		sign.hide()
+	if not e.bought_fire_extinguisher:
+		fire_extinguisher.hide()
 func _process(_float) -> void:
 	if e.add_bed and not e.bought_bed:
 		bed.show()
@@ -28,6 +31,9 @@ func _process(_float) -> void:
 	if e.add_sign and not e.bought_sign:
 		e.bought_sign = true
 		sign.show()
+	if e.add_fire_extinguisher and not e.bought_fire_extinguisher:
+		e.bought_fire_extinguisher = true
+		fire_extinguisher.show()
 	if e.transition2_finish:
 		e.transition2_finish = false
 		if e.tutorial:

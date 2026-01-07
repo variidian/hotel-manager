@@ -16,14 +16,11 @@ func _ready():
 	s5.hide()
 	animation.play("fade")
 	alien.play()
-	if Timeofday.day == 1 and e.bought_bed and e.bought_bookshelf and e.bought_sign:
+	if Timeofday.day == 1 and e.amount_of_furniture >= 3:
 		review1_text.text = "This place is SO bad. The aura here is SO off. One star!"
 		s1.show()
-	elif Timeofday.day == 1 and e.bought_bed and e.bought_bookshelf:
+	elif Timeofday.day == 1 and e.amount_of_furniture >= 2:
 		review1_text.text = "terrible! One star!"
-		s1.show()
-	elif Timeofday.day == 1 and e.bought_bed and e.bought_sign:
-		review1_text.text = "Utterly lacking. One star!"
 		s1.show()
 	elif Timeofday.day == 1 and e.bought_bed:
 		review1_text.text = "No! Just NO. One star!"

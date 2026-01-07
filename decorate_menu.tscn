@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b1ugpoiu1yxhi"]
+[gd_scene load_steps=11 format=3 uid="uid://b1ugpoiu1yxhi"]
 
 [ext_resource type="Script" uid="uid://d2gvgywp2kmmb" path="res://decorate_menu.gd" id="1_2pxhd"]
 [ext_resource type="Texture2D" uid="uid://dyi8exq5vc85k" path="res://assets/bed_tile.png" id="1_x4i3i"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://d0kqpuio6hw8v" path="res://assets/theme.tres" id="3_vcb5d"]
 [ext_resource type="Texture2D" uid="uid://d01nav4jrsw8q" path="res://assets/sign.png" id="4_cd34k"]
 [ext_resource type="Theme" uid="uid://cdnpj15hjdrwc" path="res://decorate_menu.tres" id="6_3xt5y"]
+[ext_resource type="Texture2D" uid="uid://dnjcutyldsfxn" path="res://assets/fire hydrant.png" id="6_vfjqy"]
 
 [sub_resource type="Animation" id="Animation_3xt5y"]
 length = 0.001
@@ -114,6 +115,13 @@ offset_right = 174.0
 offset_bottom = 408.0
 theme = ExtResource("3_vcb5d")
 
+[node name="ColorRect6" type="Panel" parent="colorRects"]
+offset_left = 184.0
+offset_top = 212.0
+offset_right = 332.0
+offset_bottom = 408.0
+theme = ExtResource("3_vcb5d")
+
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
 offset_left = 26.0
@@ -142,6 +150,11 @@ offset_bottom = 318.0
 position = Vector2(76.50001, 61.5)
 scale = Vector2(2.0156252, 1.7968749)
 texture = ExtResource("4_cd34k")
+
+[node name="Sprite2D2" type="Sprite2D" parent="HBoxContainer2"]
+position = Vector2(232, 62)
+scale = Vector2(2.1875, 1.9375)
+texture = ExtResource("6_vfjqy")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -207,7 +220,17 @@ libraries = {
 &"": SubResource("AnimationLibrary_vfjqy")
 }
 
+[node name="Button4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 337.0
+offset_right = 332.0
+offset_bottom = 407.0
+theme = ExtResource("6_3xt5y")
+text = "$500"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="." method="_on_button_4_pressed"]

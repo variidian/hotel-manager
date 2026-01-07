@@ -49,3 +49,14 @@ func _ready():
 func play_too_broke_animation():
 	too_broke_text.show()
 	animation.play("not_enough_money")
+
+
+func _on_button_4_pressed() -> void: #fire extinguisher purchase
+	click.play()
+	if e.bought_bed and not e.bought_fire_extinguisher:
+		if e.money >= 500:
+			e.money -= 500
+			e.add_fire_extinguisher = true
+			e.amount_of_furniture += 1
+		elif e.money <= 500:
+			play_too_broke_animation()
